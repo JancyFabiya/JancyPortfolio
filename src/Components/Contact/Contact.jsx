@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react';
 import './Contact.css';
-import emailjs from '@emailjs/browser';
+// import emailjs from '@emailjs/browser';
 import {themeContext} from "../../Context"
 import { useContext } from 'react'
 
@@ -10,19 +10,19 @@ const Contact = () => {
 
     const [done,setDone] = useState(false)
 
-    const sendEmail = (e) => {
-      e.preventDefault();
+    // const sendEmail = (e) => {
+    //   e.preventDefault();
   
-      emailjs.sendForm('service_s1uxfoj', 'template_8jfdcib', form.current, 'I5PANQCuYBmgetWxe')
-        .then((result) => {
-            console.log(result.text);
-            console.log("Message sent");
-            console.log('111');
-            setDone(true)
-        }, (error) => {
-            console.log(error);
-        });
-    };
+    //   emailjs.sendForm('service_s1uxfoj', 'template_8jfdcib', form.current, 'I5PANQCuYBmgetWxe')
+    //     .then((result) => {
+    //         console.log(result.text);
+    //         console.log("Message sent");
+    //         console.log('111');
+    //         setDone(true)
+    //     }, (error) => {
+    //         console.log(error);
+    //     });
+    // };
 
     const theme = useContext(themeContext)
     const darkMode = theme.state.darkMode;
